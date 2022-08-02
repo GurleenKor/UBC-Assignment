@@ -24,7 +24,8 @@ public class GistAPITest {
         gson= new Gson();
     }
 
-    @Test
+    @Test(description = "To verify if Gist is getting created with provided Content")
+
     public void verifyGistCreation() {
         String requestString = gson.toJson(new RequestBodyFactory().createRequestBody());
         Request request = NetworkFactory.generateRequest(requestString);
@@ -32,16 +33,15 @@ public class GistAPITest {
 
     }
 
-    @Test
+    @Test(description="To verify if Gist is getting created with out files")
     public void verifyGistCreationWithOutFiles() {
-
         String requestString = gson.toJson(new RequestBodyFactory().createRequestBodyWithOutFiles());
         Request request=NetworkFactory.generateRequest(requestString);
         verifyResponse(request,client,ResponseCodes.REQUEST_INVALID);
 
     }
 
-    @Test
+    @Test(description = "To verify if Gist is getting created without User-Agent")
     public void verifyGistCreationWithOutUserAgent() {
         OkHttpClient client = this.client.newBuilder()
                 .addNetworkInterceptor(chain -> {
