@@ -1,6 +1,7 @@
 package org.ubc.core;
 
 import com.google.gson.Gson;
+import io.qameta.allure.Step;
 import org.ubc.entity.GistRequestModal;
 
 import java.util.HashMap;
@@ -13,6 +14,7 @@ public class RequestBodyFactory {
     public static final String DUMMY_DESCRIPTION="UBC GIST";
     public static final boolean DUMMY_PUBLIC_VISIBILITY=true;
 
+   @Step("Create Request Body ")
     public GistRequestModal createRequestBody()
     {
 
@@ -21,6 +23,8 @@ public class RequestBodyFactory {
             return createGistRequestModal(files);
 
     }
+
+    @Step("Create Request Body WithOut Files")
 
     public GistRequestModal createRequestBodyWithOutFiles()
     {

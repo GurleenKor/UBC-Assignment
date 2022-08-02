@@ -25,7 +25,6 @@ public class GistAPITest {
     }
 
     @Test(description = "To verify if Gist is getting created with provided Content")
-
     public void verifyGistCreation() {
         String requestString = gson.toJson(new RequestBodyFactory().createRequestBody());
         Request request = NetworkFactory.generateRequest(requestString);
