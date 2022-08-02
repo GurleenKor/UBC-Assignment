@@ -2,5 +2,5 @@ package org.ubc.utilities;
 
 public interface Constants {
     String URL = "https://api.github.com/gists";
-    String TOKEN = "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";
+    String TOKEN = "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";
 }
