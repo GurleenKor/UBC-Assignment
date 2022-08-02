@@ -1,4 +1,4 @@
-package Utilities;
+package org.ubc.utilities;
 
 public interface Constants {
     String URL = "https://api.github.com/gists";

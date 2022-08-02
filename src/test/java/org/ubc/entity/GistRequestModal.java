@@ -1,4 +1,4 @@
-package org.ubc.core;
+package org.ubc.entity;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -22,7 +22,7 @@ public class GistRequestModal {
 
 
 
-    static class Content {
+    public static class Content {
         @SerializedName("content")
         String content;
         public Content(String content) {

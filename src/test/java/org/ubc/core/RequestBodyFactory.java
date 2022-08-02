@@ -1,6 +1,7 @@
 package org.ubc.core;
 
 import com.google.gson.Gson;
+import org.ubc.entity.GistRequestModal;
 
 import java.util.HashMap;
 import java.util.Map;

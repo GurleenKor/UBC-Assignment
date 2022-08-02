@@ -1,4 +1,4 @@
-package Utilities;
+package org.ubc.utilities;
 
 public enum ResponseCodes {
     REQUEST_INVALID(422),

@@ -1,7 +1,7 @@
 package org.ubc.core;
 
 
-import Utilities.ResponseCodes;
+import org.ubc.utilities.ResponseCodes;
 import com.google.gson.Gson;
 import okhttp3.*;
 import org.testng.Assert;
@@ -9,7 +9,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
-import java.util.HashMap;
 
 
 public class GistAPITest {
@@ -62,10 +61,11 @@ public class GistAPITest {
         Response response = null;
         try {
             response = client.newCall(request).execute();
+            Assert.assertEquals(response.code(), status.code);
         } catch (IOException e) {
             e.printStackTrace();
+            Assert.fail();
         }
-        Assert.assertEquals(response.code(), status.code);
 
 
     }
